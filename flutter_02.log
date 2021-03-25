@@ -1,0 +1,98 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+StateError: Bad state: No element
+
+```
+#0      Stream.first.<anonymous closure> (dart:async/stream.dart:1213:9)
+#1      _rootRun (dart:async/zone.dart:1346:47)
+#2      _CustomZone.run (dart:async/zone.dart:1258:19)
+#3      _CustomZone.runGuarded (dart:async/zone.dart:1162:7)
+#4      _BufferingStreamSubscription._sendDone.sendDone (dart:async/stream_impl.dart:394:13)
+#5      _BufferingStreamSubscription._sendDone (dart:async/stream_impl.dart:404:15)
+#6      _BufferingStreamSubscription._close (dart:async/stream_impl.dart:291:7)
+#7      _SyncBroadcastStreamController._sendDone.<anonymous closure> (dart:async/broadcast_stream_controller.dart:400:22)
+#8      _BroadcastStreamController._forEachListener (dart:async/broadcast_stream_controller.dart:323:15)
+#9      _SyncBroadcastStreamController._sendDone (dart:async/broadcast_stream_controller.dart:399:7)
+#10     _BroadcastStreamController.close (dart:async/broadcast_stream_controller.dart:269:5)
+#11     _AsBroadcastStreamController.close (dart:async/broadcast_stream_controller.dart:505:27)
+#12     _rootRun (dart:async/zone.dart:1346:47)
+#13     _CustomZone.run (dart:async/zone.dart:1258:19)
+#14     _CustomZone.runGuarded (dart:async/zone.dart:1162:7)
+#15     _BufferingStreamSubscription._sendDone.sendDone (dart:async/stream_impl.dart:394:13)
+#16     _BufferingStreamSubscription._sendDone (dart:async/stream_impl.dart:404:15)
+#17     _BufferingStreamSubscription._close (dart:async/stream_impl.dart:291:7)
+#18     _SinkTransformerStreamSubscription._close (dart:async/stream_transformers.dart:87:11)
+#19     _EventSinkWrapper.close (dart:async/stream_transformers.dart:21:11)
+#20     _StringAdapterSink.close (dart:convert/string_conversion.dart:251:11)
+#21     _Utf8ConversionSink.close (dart:convert/string_conversion.dart:305:20)
+#22     _ErrorHandlingAsciiDecoderSink.close (dart:convert/ascii.dart:238:15)
+#23     _ConverterStreamEventSink.close (dart:convert/chunked_conversion.dart:81:18)
+#24     _SinkTransformerStreamSubscription._handleDone (dart:async/stream_transformers.dart:132:24)
+#25     _rootRun (dart:async/zone.dart:1346:47)
+#26     _CustomZone.run (dart:async/zone.dart:1258:19)
+#27     _CustomZone.runGuarded (dart:async/zone.dart:1162:7)
+#28     _BufferingStreamSubscription._sendDone.sendDone (dart:async/stream_impl.dart:394:13)
+#29     _BufferingStreamSubscription._sendDone (dart:async/stream_impl.dart:404:15)
+#30     _BufferingStreamSubscription._close (dart:async/stream_impl.dart:291:7)
+#31     _SyncStreamControllerDispatch._sendDone (dart:async/stream_controller.dart:741:19)
+#32     _StreamController._closeUnchecked (dart:async/stream_controller.dart:596:7)
+#33     _StreamController.close (dart:async/stream_controller.dart:589:5)
+#34     _Socket._onData (dart:io-patch/socket_patch.dart:2151:21)
+#35     _rootRunUnary (dart:async/zone.dart:1370:13)
+#36     _CustomZone.runUnary (dart:async/zone.dart:1265:19)
+#37     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1170:7)
+#38     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:341:11)
+#39     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:271:7)
+#40     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:733:19)
+#41     _StreamController._add (dart:async/stream_controller.dart:607:7)
+#42     _StreamController.add (dart:async/stream_controller.dart:554:5)
+#43     new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:1687:35)
+#44     _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:1185:18)
+#45     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#46     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#47     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:120:13)
+#48     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:185:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.0.3, on Microsoft Windows [Version 10.0.18363.1440], locale en-IN)
+    • Flutter version 2.0.3 at C:\Users\pradeep\flutter
+    • Framework revision 4d7946a68d (6 days ago), 2021-03-18 17:24:33 -0700
+    • Engine revision 3459eb2436
+    • Dart version 2.12.2
+
+[✗] Android toolchain - develop for Android devices
+    ✗ Unable to locate Android SDK.
+      Install Android Studio from: https://developer.android.com/studio/index.html
+      On first launch it will assist you in installing the Android SDK components.
+      (or visit https://flutter.dev/docs/get-started/install/windows#android-setup for detailed instructions).
+      If the Android SDK has been installed to a custom location, please use
+      `flutter config --android-sdk` to update to that location.
+
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[!] Android Studio (not installed)
+    • Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/docs/get-started/install/windows#android-setup for detailed instructions).
+
+[✓] VS Code, 64-bit edition (version 1.54.3)
+    • VS Code at C:\Program Files\Microsoft VS Code
+    • Flutter extension version 3.20.0
+
+[✓] Connected device (2 available)
+    • Chrome (web) • chrome • web-javascript • Google Chrome 89.0.4389.90
+    • Edge (web)   • edge   • web-javascript • Microsoft Edge 81.0.416.62
+
+! Doctor found issues in 2 categories.
+```
